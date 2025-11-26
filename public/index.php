@@ -11,5 +11,11 @@ match ($page) {
     'reserve'  => require '../app/views/events/reserve.php',
     'admin'    => require '../app/views/admin/login.php',
     'dashboard'=> require '../app/views/admin/dashboard.php',
+    // Ajoute après les autres routes
+    'reserve' => $controller->reserve($_POST),
+    'admin'     => require '../app/views/admin/login.php',
+'login'     => $controller->login($_POST),
+'logout'    => $controller->logout(),
+'dashboard' => $controller->dashboard(),
     default    => require '../app/views/events/list.php',
 };
