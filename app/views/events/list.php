@@ -1,3 +1,10 @@
+
+<?php if (isset($_SESSION['success'])): ?>
+<div style="background:#27ae60;color:white;padding:20px;text-align:center;font-size:1.3em;border-radius:10px;margin:20px auto;max-width:800px;">
+    <?= $_SESSION['success'] ?> 
+</div>
+<?php unset($_SESSION['success']); endif; ?>
+
 <?php include __DIR__ . '/../partials/header.php'; ?>
 <h2>Événements à venir</h2>
 
